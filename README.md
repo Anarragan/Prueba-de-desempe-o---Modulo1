@@ -2,7 +2,7 @@
 
 Programa para la gestion de inventarios
 
-Este programa permite la administracion de un inventario de productos que puede crecer de forma dinamica y cuenta con 7 funciones que se describen acontinuacion:
+Este programa permite la administracion de un inventario de productos que puede crecer de forma dinamica y cuenta con 7 funciones que se describen acontinuacion, no se necesita el uso de ninguna libreria externa:
 
 __-Add_product:__ Esta funcion recibe 3 parametros (name, price, amount). El primer argumento es de tipo string, el segundo de tipo float y el tercero de tipo int; usa ciclos para determinar la existencia de un producto, si ya está muestra el mensaje con la aclaracion. Si el producto no se encuentra verifica que los valores ingresados sean numeros positivos y crea un diccionario para el producto, luego el diccionario lo agrega como elemento a la variable global de tipo lista llamada inventory.
 
