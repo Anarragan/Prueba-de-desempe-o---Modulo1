@@ -12,4 +12,12 @@ Este programa permite la administracion de un inventario de productos que puede 
 
 -Delete_product: Se recibe un solo parametro llamado name, busca el producto dentro de la lista inventory y si está lo elimina, si no está, señala que el producto no se encuentra.
 
--Calculate_total_price: 
+-Calculate_total_price: Usa una funcion lambda para calcular el precio total del inventario, hace un ciclo para recorrer cada producto en la lista inventario y toma sus valores asociados, cada elemento se puede ver como un Xi, lo que hace la funcion es una sumatoria de price*amount para cada Xi.
+
+-Show_menu: Solo muestra un menu al usuario
+
+-main: Es la funcion principal en donde se hace el llamado a todas las funciones dependiendo de la opcion seleccionada, valida los datos de entrada y verifica que las opciones selecionadas esten disponibles. Pide los datos dependiendo de la opcion y los pasa como parametros a las funciones ya establecidas.
+
+-if _name_ == "__main__": Hace que el archivo ejecute solo lo que hay en el y no lo ejecuta en caso de que se importe como modulo en otro archivo, pero se puede hacer el llamado tradicional de main() sin ningun problema.
+
+
