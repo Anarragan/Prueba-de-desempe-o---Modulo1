@@ -7,17 +7,20 @@ def add_product(name:str = "", price:float = 0, amount:int = 0):
     name:str = name.strip().lower()  
     for product in inventory:
         if name in product:
-            return print(f"El producto {name} ya existe...")
+            print(f"El producto {name} ya existe...")
+            return False
     
     if price > 0 and amount > 0:
         product:dict = {
             name: (price, amount)
         }
         inventory.append(product)
-        return print(f"Producto {name} añadido\n-------------------------------------")
+        print(f"Producto {name} añadido\n-------------------------------------")
+        return True
     
     else:
-        return print(f"El precio y la cantidad deben ser valores mayores a 0")
+        print(f"El precio y la cantidad deben ser valores mayores a 0")
+        return False
 
 
 #Search for the product given its name, show its name, price and quantity, if it is not there it 
@@ -91,16 +94,17 @@ def main():
         try:
             option:int = int(input("Ingrese el numero de la opcion: "))
             if option == 1:
-                size = len(inventory)
-                if size < 5:
+                if len(inventory) < 5:
                     print("Debe ingresar al menos 5 productos")
-                    for i in range(1, 5 +1):
+                
+                while len(inventory) <= 3:      
                         name:str = str(input("Nombre del producto: "))
                         price:float = float(input("Precio del producto: "))
                         amount:int = int(input("Cantidad del producto: "))
                         print("---------------------------------------")
                         add_product(name, price, amount)
-                else:
+
+                else:                    
                     name:str = str(input("Nombre del producto: "))
                     price:float = float(input("Precio del producto: "))
                     amount:int = int(input("Cantidad del producto: "))
