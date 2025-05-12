@@ -16,7 +16,7 @@ __-Calculate_total_price:__ Usa una funcion lambda para calcular el precio total
 
 __-Show_menu:__ Solo muestra un menu al usuario
 
-__-main:__ Es la funcion principal en donde se hace el llamado a todas las funciones dependiendo de la opcion seleccionada, valida los datos de entrada y verifica que las opciones selecionadas esten disponibles. Pide los datos dependiendo de la opcion y los pasa como parametros a las funciones ya establecidas.
+__-main:__ Es la funcion principal en donde se hace el llamado a todas las funciones dependiendo de la opcion seleccionada, valida los datos de entrada y verifica que las opciones selecionadas esten disponibles. Pide los datos dependiendo de la opcion y los pasa como parametros a las funciones ya establecidas. Si se selecciona 1 Llama a la funcion add_product y si los productos de la lista global (inventory) son menores a 5 pide los 5 que se necesitan como minimo, si hay mas de 5 hace el proceso normal. Si se seleciona 2 llama a la funcion search_product y se le pasa el parametro de nombre. Si se selecciona 3 llama a la funcion update_price y se pide el nombre y el nuevo precio para pasarlos como parametros a la funcion. Si se selecciona 4 llama a la funcion delete_product pide el nombre y se le pasa como parametro. Si se selleciona 5 llama a la funcion anonima calculate_total_price y esta realiza el calculo y lo muestra. Si se selecciona 6 sale del programa.
 
 __-if _name_ == "__main__":__ Hace que el archivo ejecute solo lo que hay en el y no lo ejecuta en caso de que se importe como modulo en otro archivo, pero se puede hacer el llamado tradicional de main() sin ningun problema.
 
